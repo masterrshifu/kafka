@@ -16,7 +16,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 @SpringBootTest
-public class KafkaControllerTest {
+class KafkaControllerTest {
 
     @Mock
     private MessageProducer messageProducer;
@@ -34,7 +34,7 @@ public class KafkaControllerTest {
     }
 
         @Test
-    public void testSendMessage() throws Exception {
+        void testSendMessage() throws Exception {
         mockMvc = MockMvcBuilders.standaloneSetup(kafkaController).build();
 
         String topic = "my-topic";

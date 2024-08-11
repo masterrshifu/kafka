@@ -11,8 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class KafkaController {
 
+
+    private final MessageProducer messageProducer;
+
     @Autowired
-    private MessageProducer messageProducer;
+    public KafkaController(MessageProducer messageProducer) {
+        this.messageProducer = messageProducer;
+    }
 
     @Value("${kafka.topic}")
     private String topic;

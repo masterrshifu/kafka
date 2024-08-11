@@ -9,7 +9,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
-public class MessageProducerTest {
+class MessageProducerTest {
 
     @Mock
     private KafkaTemplate<String, String> kafkaTemplate;
@@ -23,7 +23,7 @@ public class MessageProducerTest {
     }
 
     @Test
-    public void testSendMessage() {
+     void testSendMessage() {
         String topic = "my-topic";
         String message = "Hello Kafka";
 
