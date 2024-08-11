@@ -11,7 +11,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-public class MessageProducerTest {
+class MessageProducerTest {
 
     @Mock
     private KafkaTemplate<String, String> kafkaTemplate;

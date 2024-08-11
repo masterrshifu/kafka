@@ -3,7 +3,7 @@ package com.spring.kafka.demo.consumer;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
-public class MessageConsumerTest {
+class MessageConsumerTest {
 
     @InjectMocks
     private MessageConsumer messageConsumer;

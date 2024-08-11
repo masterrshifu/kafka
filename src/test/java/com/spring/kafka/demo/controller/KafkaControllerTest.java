@@ -6,9 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
@@ -19,7 +17,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
-public class KafkaControllerTest {
+class KafkaControllerTest {
 
     private MockMvc mockMvc;
 
@@ -39,7 +37,7 @@ public class KafkaControllerTest {
     }
 
     @Test
-    public void testSendMessage() throws Exception {
+    void testSendMessage() throws Exception {
         String message = "test-message";
 
         // Perform a POST request to /send with the message parameter
@@ -53,7 +51,7 @@ public class KafkaControllerTest {
     }
 
     @Test
-    public void testSendMessage_nullMessage() throws Exception {
+    void testSendMessage_nullMessage() throws Exception {
         // Verify the handling of null messages
         mockMvc.perform(post("/send")
                         .param("message", (String) null))
