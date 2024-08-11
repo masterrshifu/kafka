@@ -27,13 +27,6 @@ class MessageConsumerTest {
     }
 
     @Test
-    void testListen() {
-        String message = "Hello Kafka";
-        messageConsumer.listen(message);
-        // Verify the logic inside your listener, if any
-    }
-
-    @Test
      void testMessageProcessing() {
         String testMessage = "Hello Kafka";
         int expectedLength = testMessage.length();
